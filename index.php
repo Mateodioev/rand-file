@@ -4,9 +4,9 @@ use App\Config\Files;
 use App\Models\Bot;
 use App\Config\StringUtils;
 
-const BOT_TOKEN = '1777485480:AAFJ4tYUdls6sHCsfVh4vXQKoM755auPKIM';
+const BOT_TOKEN = 'YOUR BOT TOKEN';
 const GITHUB    = 'https://github.com/Mateodioev/';
-const REPO      = '';
+const REPO      = 'rand-file';
 
 $bot = new Bot(BOT_TOKEN);
 
