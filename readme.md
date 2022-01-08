@@ -20,7 +20,7 @@ Valla a [@BotFather](https://t.me/BotFather) y escriba los siguientes comandos:
 2. Responda con un nombre para su bot
 3. Escriba un username (@) para su bot, este debe terminar si o si en 'bot'
 ```
-Telegram al final le devolver un token
+BotFather al final le devolvera un token
 
 Setwebhook
 --------
