@@ -28,9 +28,6 @@ if (isset($msg['text'])) {
         $hi = "Hola " . $name . ", enviame un sticker, gif, foto, o un audio y yo te enviare otro archivo del mismo tipo\n\nPd: No me hago responsable de los archivos enviados por el bot, ya que estos proviene de los usuarios";
         $bot::SendMsg($chat_id, $hi, $msg_id, ['inline_keyboard' => [[['text' => 'Gihub', 'url' => GITHUB], ['text' => 'Repository', 'url' => GITHUB.REPO]]]], 'markdown');
     }
-    if ($bot::Cmd('info')) {
-        $bot::SendMsg($chat_id, 'Aun no hago las funciones zzzzz', $msg_id);
-    }
     exit;
 }
 
