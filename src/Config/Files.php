@@ -2,7 +2,7 @@
 
 namespace App\Config;
 
-// use App\Config\StringUtils;
+use App\Config\StringUtils;
 
 class Files
 {
