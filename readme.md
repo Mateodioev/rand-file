@@ -1,5 +1,6 @@
 Random file telegram bot 🤖
 =======
+[![CodeFactor](https://www.codefactor.io/repository/github/mateodioev/rand-file/badge)](https://www.codefactor.io/repository/github/mateodioev/rand-file)
 
 Enviale un archivo y este te devolverá otro del mismo tipo
 
