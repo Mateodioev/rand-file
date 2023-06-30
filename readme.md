@@ -23,14 +23,18 @@ Valla a [@BotFather](https://t.me/BotFather) y escriba los siguientes comandos:
 ```
 BotFather al final le devolvera un token
 
-Setwebhook
+Instalar y ejecutar el bot
 --------
 
+Clona este repositorio
+```bash
+git clone https://github.com/Mateodioev/rand-file.git
+cd rand-file
 ```
-    $endpoint = 'https://api.telegram.org/bot`BOT_TOKEN`/'
-    $method = 'setwebhook'
-    $params = url=dominio.donde.esta.hosteado.su.bot.com
 
-    Con cURL
-    $ curl 'https://api.telegram.org/botBOT_TOKEN/setwebhook?url=dominio.com/path_a_su_archivo'
+Ejecuta el bot
+
+> Primero edita el archivo index.php con tu bot token
+```bash
+php index.php
 ```

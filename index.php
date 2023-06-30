@@ -7,7 +7,7 @@ use Mateodioev\TgHandler\Log\{Logger, TerminalStream};
 
 require './vendor/autoload.php';
 
-const BOT_TOKEN = '5962060279:AAF8q8ZFGqUvtcfza75BQ2nFD851jBTe9OQ';
+const BOT_TOKEN = ''; // Pon tu bot token aqui
 
 $bot = new Bot(BOT_TOKEN);
 
