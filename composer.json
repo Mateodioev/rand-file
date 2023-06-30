@@ -19,5 +19,6 @@
     ],
     "require": {
         "mateodioev/tg-handler": "^4.0"
-    }
+    },
+    "minimum-stability": "beta"
 }

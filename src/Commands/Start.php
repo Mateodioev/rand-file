@@ -27,7 +27,7 @@ class Start extends MessageCommand
             $message,
             $context->getMessageId(),
             params: [
-                'inline_keyboard' => (string) Buttons::create()
+                'reply_markup' => (string) Buttons::create()
                     ->addCeil(['text' => 'Gihub', 'url' => self::GITHUB])
                     ->addCeil(['text' => 'Repository', 'url' => self::GITHUB . self::REPO])
             ]

@@ -58,6 +58,8 @@ class EvMessage extends MessageEvent
 
     private function getId(string $type, Message $message): array
     {
+        $this->logger()->debug('Getting {type}', compact('type'));
+
         if ($type === 'photo') { // Get the largest file
             $file = $message->photo[count($message->photo) - 1];
             return [$file->file_id, $file->file_unique_id];
