@@ -17,6 +17,7 @@
             "email": "no@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "mateodioev/tg-handler": "^4.0"
+    }
 }
