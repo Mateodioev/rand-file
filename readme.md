@@ -36,5 +36,7 @@ Ejecuta el bot
 
 > Primero edita el archivo index.php con tu bot token
 ```bash
+composer install
 php index.php
 ```
+
