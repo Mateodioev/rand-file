@@ -6,7 +6,7 @@ use Mateodioev\Bots\Telegram\Api;
 use Mateodioev\TgHandler\Context;
 
 use App\Config\StringUtils;
-use Mateodioev\Bots\Telegram\Buttons;
+use Mateodioev\Bots\Telegram\Buttons\ButtonFactory;
 use Mateodioev\TgHandler\Commands\MessageCommand;
 
 class Start extends MessageCommand
@@ -27,7 +27,7 @@ class Start extends MessageCommand
             $message,
             $context->getMessageId(),
             params: [
-                'reply_markup' => (string) Buttons::create()
+                'reply_markup' => (string) ButtonFactory::inlineKeyboardMarkup()
                     ->addCeil(['text' => 'Gihub', 'url' => self::GITHUB])
                     ->addCeil(['text' => 'Repository', 'url' => self::GITHUB . self::REPO])
             ]

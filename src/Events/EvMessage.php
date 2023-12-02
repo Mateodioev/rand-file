@@ -9,6 +9,7 @@ use Mateodioev\TgHandler\Context;
 use Mateodioev\Bots\Telegram\Types\Message;
 use Mateodioev\TgHandler\Events\Types\MessageEvent;
 use App\Config\Files;
+use Mateodioev\Bots\Telegram\Types\InputFile;
 
 class EvMessage extends MessageEvent
 {
@@ -30,27 +31,21 @@ class EvMessage extends MessageEvent
         if ($message->sticker) {
             [$fileId, $uniqueId] = $this->getId('sticker', $message);
             $bot->sendSticker($ctx->getChatId(), $this->saveAndGet('sticker', $fileId, $uniqueId));
-
         } elseif ($message->animation) {
             [$fileId, $uniqueId] = $this->getId('animation', $message);
             $bot->sendAnimation($ctx->getChatId(), $this->saveAndGet('animation', $fileId, $uniqueId));
-
         } elseif ($message->photo) {
             [$fileId, $uniqueId] = $this->getId('photo', $message);
             $bot->sendPhoto($ctx->getChatId(), $this->saveAndGet('photo', $fileId, $uniqueId));
-
         } elseif ($message->audio) {
             [$fileId, $uniqueId] = $this->getId('audio', $message);
             $bot->sendAudio($ctx->getChatId(), $this->saveAndGet('audio', $fileId, $uniqueId));
-
         } elseif ($message->voice) {
             [$fileId, $uniqueId] = $this->getId('voice', $message);
             $bot->sendVoice($ctx->getChatId(), $this->saveAndGet('voice', $fileId, $uniqueId));
-
         } elseif ($message->document) {
             [$fileId, $uniqueId] = $this->getId('document', $message);
             $bot->sendDocument($ctx->getChatId(), $this->saveAndGet('document', $fileId, $uniqueId));
-
         } else {
             return;
         }
@@ -69,12 +64,12 @@ class EvMessage extends MessageEvent
         return [$file->file_id, $file->file_unique_id];
     }
 
-    private function saveAndGet(string $type, string $id, string $uniqueId): sendInputFile
+    private function saveAndGet(string $type, string $id, string $uniqueId): InputFile
     {
         $allIds = Files::Open('all_ids');
 
         $this->saveId($type, $id, $uniqueId, $allIds); // Guarda el ID si es que aun no existe
-        return sendInputFile::fromId(Files::OpenUnique($type)); // Obtiene un ID random de la DB
+        return InputFile::fromId(Files::OpenUnique($type)); // Obtiene un ID random de la DB
     }
 
     private function saveId(string $type, string $id, string $uniqueId, array $allIds)
